@@ -1,10 +1,12 @@
-﻿int num1 = 0; int num2 = 0; string loop = "";
-
+﻿double num1 ; double num2; string loop;
 static string answerToUpper()
 {
-    string loop = Console.ReadLine();
-    loop = loop.ToUpper();
-    return loop;
+    string? loop = Console.ReadLine();
+    loop = loop?.ToUpper();
+    if (loop != null)
+        return loop;
+    else
+        return "erro!";
 }
 
 
@@ -14,10 +16,10 @@ Console.WriteLine("-------------------------\n");
 do
 {
     Console.WriteLine("Digite um número, e tecle Enter");
-    num1 = Convert.ToInt32(Console.ReadLine());
+    num1 = Convert.ToDouble(Console.ReadLine());
 
     Console.WriteLine("Digite o segundo número, e tecle Enter");
-    num2 = Convert.ToInt32(Console.ReadLine());
+    num2 = Convert.ToDouble(Console.ReadLine());
 
     Console.WriteLine("Escolha uma opção na lista abaixo:");
     Console.WriteLine("\t1 - Adição");
@@ -52,5 +54,5 @@ do
     Console.WriteLine("\nS - Sim");
     Console.WriteLine("\nN - Não");
     loop = answerToUpper();
+    Console.Clear();
 } while (loop == "S");
-
