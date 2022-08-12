@@ -9,17 +9,16 @@ static string answerToUpper()
         return "erro!";
 }
 
-
-
 Console.WriteLine("Calculadora em console C#\r");
 Console.WriteLine("-------------------------\n");
+
 do
 {
     Console.WriteLine("Digite um número, e tecle Enter");
-    num1 = Convert.ToDouble(Console.ReadLine());
+    num1 = Convert.ToDouble(value: Console.ReadLine());
 
     Console.WriteLine("Digite o segundo número, e tecle Enter");
-    num2 = Convert.ToDouble(Console.ReadLine());
+    num2 = Convert.ToDouble(value: Console.ReadLine());
 
     Console.WriteLine("Escolha uma opção na lista abaixo:");
     Console.WriteLine("\t1 - Adição");
@@ -27,7 +26,7 @@ do
     Console.WriteLine("\t3 - Multiplicação");
     Console.WriteLine("\t4 - Divisão");
 
-    var option = Console.ReadLine();
+    string? option = Console.ReadLine();
 
     switch (option)
     {
@@ -56,3 +55,5 @@ do
     loop = answerToUpper();
     Console.Clear();
 } while (loop == "S");
+Console.WriteLine("Obrigado por usar nossa Calculadora!");
+Console.WriteLine("\n --------------------------------- ");
